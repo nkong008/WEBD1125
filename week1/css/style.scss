@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif ;
+}
+
+// ul li a {
+//     color: green;
+// }
+
+// /*used to select an attribute*/
+// [href="#"], a[href^="http"]{
+//     color: red;
+//     font-size: 2em;
+// }
+
+// /*used to select the children*/
+// main > section {
+//     background-color: green;
+//     width: 200px;
+//     height: 200px;
+
+// }
+
+// /*used to select a specific child ex: first section*/
+// section:first-of-type {
+//     background-color: red;
+// }
+
+// section:last-of-type {
+//     background-color: red;
+// }
+
+// section:nth-child(2) {
+//     background-color: blue;
+// }
+
+// main {
+//     section:nth-child(1){
+//         img {
+//             width: 400px;
+//             height: auto;
+//             padding: 4em;
+//             border: 1em solid green;
+//             box-sizing: content-box;
+//         }
+//         img:nth-child(1) {
+//             margin: 0 0 0 300px;
+//         }
+//     }
+// }
+
+header {
+    nav {
+        #logo {
+            font-size: 2em;
+            float: left;
+            margin-top: 0.25em;
+            margin-left: 1em;
+        }
+        // h1 {
+        //     font-weight: 100;
+        }
+        ul {
+            float: right;
+            margin-top: 1em;
+            margin-right: 2em;
+            li {
+                display: inline-block;
+                padding: 1em 0.45em;
+                cursor: pointer;
+                //loading transition which is applied in the li
+                transition: all 200ms linear;
+                a {
+                    text-decoration: none;
+                    font-weight: 400;
+                    color: black;
+                    transition: all 200ms linear;
+
+                }
+            }
+            li:hover {
+                background-color: red;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+main {
+    //dont let other elements take up their space
+    clear: both;
+    //position is powerful
+    position: relative;
+    top: 50px;
+    width: 900px;
+    height: 600px;
+    background-color: green;
+    //quickest way to center an element but it needs a width
+    margin: 0 auto;
+    section {
+        width: 300px;
+        height: 100px;
+    }
+    section:nth-of-type(1) {
+        background-color: red;
+        position: relative;
+        top: 150px; left: 600px;
+    }
+    section:nth-of-type(2) {
+        background-color: blue;
+        position: relative;
+        top: 150px; left: 600px;
+    }
+    section:nth-of-type(3) {
+        background-color: white;
+        position: relative;
+        top: 150px; left: 600px;
+        font-weight: 100;
+    }
+}
+
