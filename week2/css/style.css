@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: pirulen;
+  src: url(../fonts/pirulen_rg.ttf);
+}
+#container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+#container header {
+  height: 5em;
+  background-color: red;
+}
+#container header .bars {
+  width: 4em;
+}
+#container header .bars .bars-path,
+#container header .bars .w-6,
+#container header .bars .h-6 {
+  fill: #fff;
+}
+#container header .user {
+  width: 4em;
+}
+#container header .user .user-path {
+  cursor: url("../images/bluebox.jpg"), auto;
+  fill: #fff;
+  transition: all 300ms linear;
+}
+#container header .user .user-path:hover {
+  fill: black;
+}
+#container header .user .user-path:active {
+  fill: green;
+}
+#container header::before {
+  content: url(../images/bluebox.jpg);
+}
+#container header::after {
+  content: url(../images/bluebox.jpg);
+  width: 200px;
+  background-color: black;
+}
+#container main {
+  background-color: rgb(47, 79, 79);
+}
+#container main section#sect1 {
+  width: 600px;
+  width: 100%;
+  height: 300px;
+  background-color: orange;
+  margin: 0 auto;
+}
+#container main section#sect1 h1 {
+  text-align: center;
+}
+#container main section#sect1 div {
+  background-color: orange;
+  font-size: 0.85em;
+  clear: right;
+}
+#container main section#sect1 div img {
+  width: 60%;
+  float: right;
+}
+#container main section#sect1 div::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#container main section#sect2 {
+  background-color: turquoise;
+  clear: both;
+  padding: 70px 0;
+  text-align: center;
+}
+#container main section#sect3 {
+  background-color: black;
+  color: white;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+}
+#container main section#sect4 {
+  background-color: rgb(47, 79, 79);
+  color: orange;
+  height: 140px;
+  position: relative;
+}
+#container main section#sect4 p {
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+#container main section#sect5 {
+  background-color: rgb(0, 0, 0);
+  color: orange;
+  height: 140px;
+  position: relative;
+  text-align: center;
+  font-family: pirulen;
+}/*# sourceMappingURL=style.css.map */

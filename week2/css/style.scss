@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+@font-face {
+    font-family: pirulen;
+    src: url(../fonts/pirulen_rg.ttf);
+}
+#container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  header {
+    height: 5em;
+    background-color: red;
+    .bars {
+      width: 4em;
+      .bars-path,
+      .w-6,
+      .h-6 {
+        fill: #fff;
+      }
+    }
+    .user {
+      width: 4em;
+      .user-path {
+        cursor: url("../images/bluebox.jpg"), auto;
+        // cursor: pointer;
+        fill: #fff;
+        transition: all 300ms linear;
+      }
+      .user-path:hover {
+        fill: black;
+      }
+      .user-path:active {
+        fill: green;
+      }
+    }
+  } 
+  header::before {
+    content: url(../images/bluebox.jpg);
+  }
+  header::after {
+    content: url(../images/bluebox.jpg);
+    width: 200px;
+    background-color: black;
+  }
+  //header ends here
+  main {
+    background-color: rgb(47, 79, 79);
+    // height: calc(100vh - 5em);
+    section#sect1 {
+      width: 600px;
+      width: 100%;
+      height: 300px;
+      background-color: orange;
+      margin: 0 auto;
+      h1 {
+        text-align: center;
+      }
+      div {
+        background-color: orange;
+        font-size: 0.85em;
+        // width: 80%;
+        //taken out of flow
+        // position: absolute;
+        //you have to fix the flow by giving its own width
+        // width: 300px;
+        // right: 500px;
+        // width: 100%;
+        clear: right;
+        // height: 50%;
+        img {
+          width: 60%;
+          //block consumes the entire width
+          // display: block;
+          //sets the image in the center saem thing as margin 0 auto
+          // margin-left: auto;
+          // margin-right: auto;
+          float: right;
+        }
+      }
+    //::= pseudo element : = pseudo class
+    //clearfix hack 
+      div::after {
+        content: "" ;
+        clear: both;
+        display: table;
+      }
+    }
+    //sect1 ends here///////////////////////////////
+    section#sect2 {
+        background-color: turquoise;
+        clear: both;
+        padding: 70px 0;
+        text-align: center;
+    }
+    //section 2 ends here////////////////////////////
+    section#sect3 {
+        background-color: black;
+        color: white;
+        height: 140px;
+        line-height: 140px;
+        text-align: center;
+    }
+    //section 3 ends here////////////////////////////
+    section#sect4 {
+        background-color: rgb(47, 79, 79);
+        color: orange;
+        height: 140px;
+        position: relative;
+        p {
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    //section 4 ends here////////////////////////////
+    }
+    section#sect5{
+        background-color: rgb(0, 0 , 0 );
+        color: orange;
+        height: 140px;
+        position: relative;
+        text-align: center;
+        font-family: pirulen;
+        }
+  }
+}
