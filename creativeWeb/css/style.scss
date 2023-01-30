@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+@font-face {
+    font-family: pirulen;
+    src: url(../fonts/pirulen_rg.ttf);
+}
+
+$color1:rgb(129,113,6);
+$color2:rgb(101,101,101);
+$color3:rgb(22,14,61);
+$color4:rgb(56,58,22);
+$color5:rgb(64,58,22);
+$color6:rgb(255, 255, 255);
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-color: $color3;
+    position: relative;
+    nav {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        h1 {
+            text-transform: uppercase;
+            span#creative {
+                color: $color1;
+            }
+            span#web {
+                color: $color6;
+                font-size: 1.5em;
+                margin-left: 0.25em;
+            }
+            
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin-left: auto;
+            li {
+                padding: 0 1em;
+                a{
+                    text-decoration: none;
+                    color: $color6;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    main {
+        position: relative;
+    }
+    footer {
+        height: 100px;
+        background-color: $color1;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+

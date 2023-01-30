@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: pirulen;
+  src: url(../fonts/pirulen_rg.ttf);
+}
+div#box1.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#box1.container section {
+  width: 60%;
+  height: 40%;
+  background-color: darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 15px solid transparent;
+  border-radius: 5em 15em;
+  -o-border-image: url("../images/border-image.svg") 40 stretch;
+     border-image: url("../images/border-image.svg") 40 stretch;
+}
+div#box1.container section h1 {
+  color: white;
+  font-size: 2.5em;
+  padding: 0.5em;
+  text-align: center;
+  letter-spacing: 0.5em;
+}/*# sourceMappingURL=style.css.map */
