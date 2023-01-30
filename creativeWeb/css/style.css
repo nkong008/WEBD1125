@@ -26,6 +26,7 @@
 }
 #container nav h1 span#creative {
   color: rgb(129, 113, 6);
+  font-weight: 500;
 }
 #container nav h1 span#web {
   color: rgb(255, 255, 255);
@@ -36,6 +37,8 @@
   display: flex;
   list-style: none;
   margin-left: auto;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
 }
 #container nav ul li {
   padding: 0 1em;
@@ -48,9 +51,73 @@
 #container main {
   position: relative;
 }
-#container footer {
+#container main div.phrase {
+  position: relative;
+}
+#container main div.phrase h1.phrase1 {
+  color: rgb(129, 113, 6);
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 6em;
+  padding-top: 30px;
+  position: relative;
+  z-index: 5;
+}
+#container main div.phrase img {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  left: 30px;
+  right: 0px;
+  top: 60px;
+  z-index: 3;
+}
+#container main div.phrase img.tech {
+  height: 450px;
+  width: 550px;
+  position: absolute;
+  left: 850px;
+  right: 0px;
+  top: 5px;
+  z-index: 4;
+}
+#container main div.phrase img.gold {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 750px;
+  right: 0px;
+  top: 1px;
+  z-index: 2;
+}
+#container main div.phrase img.purple {
+  padding-top: 100px;
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  right: 0px;
+  left: 200px;
+  z-index: 1;
+}
+#container main div.info {
+  position: absolute;
+  background-color: white;
+  width: 550px;
+  left: 850px;
+  padding-top: 75px;
+}
+#container main div.info h3 {
+  color: rgb(129, 113, 6);
+}
+#container main div.info p {
+  font-size: 15px;
+  padding: 3px;
+}
+
+footer {
+  border-top: 1px solid white;
   height: 100px;
-  background-color: rgb(129, 113, 6);
+  background-color: rgb(58, 46, 135);
   position: absolute;
   bottom: 0;
   width: 100%;

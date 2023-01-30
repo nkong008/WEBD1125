@@ -9,12 +9,17 @@
     font-family: pirulen;
     src: url(../fonts/pirulen_rg.ttf);
 }
-
+//golden
 $color1:rgb(129,113,6);
+//grey
 $color2:rgb(101,101,101);
+//navy blue 
 $color3:rgb(22,14,61);
-$color4:rgb(56,58,22);
+//purple
+$color4:rgb(58,46,135);
+//dark golden brown
 $color5:rgb(64,58,22);
+//white
 $color6:rgb(255, 255, 255);
 
 #container {
@@ -30,6 +35,7 @@ $color6:rgb(255, 255, 255);
             text-transform: uppercase;
             span#creative {
                 color: $color1;
+                font-weight: 500;
             }
             span#web {
                 color: $color6;
@@ -42,6 +48,8 @@ $color6:rgb(255, 255, 255);
             display: flex;
             list-style: none;
             margin-left: auto;
+            border-bottom: 1px solid white;
+            padding-bottom: 20px;
             li {
                 padding: 0 1em;
                 a{
@@ -54,13 +62,80 @@ $color6:rgb(255, 255, 255);
     }
     main {
         position: relative;
+        // border-bottom: 1px solid white;
+        div.phrase {
+            position: relative;
+            h1.phrase1 {
+                color: $color1;
+                padding-left: 30px;
+                font-weight: 500;
+                font-size: 6em;
+               padding-top: 30px;
+               position: relative;
+               z-index: 5;
+            }
+            img {
+                height: 300px;
+                width: 300px;
+                position: absolute;
+                left: 30px;
+                right: 0px;
+                top: 60px;
+                z-index: 3;
+            }
+            img.tech {
+                height: 450px;
+                width: 550px;
+                position: absolute;
+                left: 850px;
+                right: 0px;
+                top: 5px;
+                z-index: 4;
+            }
+            img.gold {
+                position: absolute;
+                height: 200px;
+                width: 200px;
+                left: 750px;
+                right: 0px;
+                top: 1px;
+                z-index: 2;
+            }
+            img.purple {
+                padding-top: 100px;
+                position: absolute;
+                height:500px;
+                width: 500px;
+                right: 0px;
+                left: 200px;
+                z-index: 1;
+            }
+        }
+       div.info {
+        position: absolute;
+        background-color: white;
+        width: 550px;
+        left: 850px;
+        padding-top: 75px;
+        h3 {
+            color: $color1;
+        }
+        p {
+            font-size: 15px;
+            padding: 3px;
+        }
+       }
+            
+        }
     }
     footer {
+        //add padding to the line for spcae 
+        border-top: 1px solid white;
         height: 100px;
-        background-color: $color1;
+        background-color: $color4;
         position: absolute;
         bottom: 0;
         width: 100%;
     }
-}
+
 
