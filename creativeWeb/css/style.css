@@ -50,6 +50,7 @@
 }
 #container main {
   position: relative;
+  border-bottom: 1px solid white;
 }
 #container main div.phrase {
   position: relative;
@@ -115,10 +116,42 @@
 }
 
 footer {
-  border-top: 1px solid white;
   height: 100px;
   background-color: rgb(58, 46, 135);
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+footer div.copy {
+  color: rgb(129, 113, 6);
+  padding-left: 50px;
+}
+footer div.century {
+  color: white;
+  padding-left: 400px;
+  display: flex;
+}
+footer .facebook {
+  width: 30px;
+  position: absolute;
+  margin-left: 150px;
+  fill: rgb(255, 255, 255);
+  margin-left: 1200px;
+  top: 50px;
+}
+footer .twitter {
+  width: 30px;
+  position: absolute;
+  margin-left: 150px;
+  fill: rgb(255, 255, 255);
+  margin-left: 1250px;
+  top: 50px;
+}
+footer .linkedon {
+  width: 30px;
+  position: absolute;
+  margin-left: 150px;
+  fill: rgb(255, 255, 255);
+  margin-left: 1300px;
+  top: 50px;
 }/*# sourceMappingURL=style.css.map */

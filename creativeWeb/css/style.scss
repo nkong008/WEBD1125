@@ -62,7 +62,7 @@ $color6:rgb(255, 255, 255);
     }
     main {
         position: relative;
-        // border-bottom: 1px solid white;
+        border-bottom: 1px solid white;
         div.phrase {
             position: relative;
             h1.phrase1 {
@@ -117,6 +117,7 @@ $color6:rgb(255, 255, 255);
         width: 550px;
         left: 850px;
         padding-top: 75px;
+        
         h3 {
             color: $color1;
         }
@@ -124,18 +125,53 @@ $color6:rgb(255, 255, 255);
             font-size: 15px;
             padding: 3px;
         }
+
        }
-            
+    
         }
+       
     }
     footer {
         //add padding to the line for spcae 
-        border-top: 1px solid white;
+        // border-top: 1px solid white;
         height: 100px;
         background-color: $color4;
         position: absolute;
         bottom: 0;
         width: 100%;
+        div.copy {
+            color: $color1;
+            padding-left: 50px;
+        }
+        div.century {
+            color: white;
+            padding-left: 400px;
+           display: flex;
+        }
+        .facebook {
+            width: 30px;
+            position: absolute;
+            margin-left: 150px;
+            fill: rgb(255, 255, 255);
+            margin-left: 1200px;
+            top: 50px;
+        }
+        .twitter {
+            width: 30px;
+            position: absolute;
+            margin-left: 150px;
+            fill: rgb(255, 255, 255);
+            margin-left: 1250px;
+            top: 50px;
+        }
+        .linkedon {
+            width: 30px;
+            position: absolute;
+            margin-left: 150px;
+            fill: rgb(255, 255, 255);
+            margin-left: 1300px;
+            top: 50px;
+        }
     }
 
 
