@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    .bkgd {
+        height: 128px;
+    }
+
+    //using mult backgrounds
+    #multi-bkgd {
+        //the order you put the images/ content matter!
+        background-image: url("../images/boxes.svg"), url("../images/grad-box.svg");
+        background-position: right bottom, left top;
+        //gradiant is the only one repeating
+        background-repeat: no-repeat, repeat;
+    }
+
+    //changing background image size
+    #bkgd-size {
+        background-color: rgb(255, 255, 255);
+        background-image: url("../images/boxes.svg");
+        background-repeat: no-repeat;
+        background-size: 64px 64px;
+    }
+
+    #Large-imgz {
+        width: 100%;
+        height: 400px;
+        background-color: aqua;
+        //makes them sit side by side
+        display: flex;
+
+        section {
+            width: 50%;
+            height: 100%;
+        }
+
+        #Large-imgz-1 {
+            background-image: url("../images/boxes.svg");
+            background-repeat: no-repeat;
+            //The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
+            background-size: contain;
+        }
+
+        #Large-imgz-2 {
+            background-image: url("../images/boxes.svg");
+            background-repeat: no-repeat;
+            //The cover keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area.
+            background-size: cover;
+        }
+    }
+}
+
+// short demo
+// useful for individual images
+//example of hero image
+#container2 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/technology.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    h1 {
+        font-size: 5em;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+//background clip helps with where the boarder sets 
+//background orgin property specifies where the background image is positioned///////
+
+// Using Linear backgrounds
+#container3 {
+    // you can also give key words ex: to bottom, right. although angles is easier to understand and read.
+    //if you want to use transparancy you have to use rgba() ex: rgba(255,0,0,0)
+    background-image: linear-gradient(45deg, red, orange, yellow);
+}
+#container4 {
+    //you can use percentages to changee the amount of color you use
+    background-image: radial-gradient( circle, red, orange, yellow, blue 50%, purple);
+}
+
+#container5 {
+    .gallery {
+        float: left;
+        // dividing the view height by 4 parts 
+        width: calc(100vw/4);
+        //adds in some seperation 
+        padding: 1em;
+        a {
+            img {
+                width: 80%;
+                //automatically matches height
+                height: auto;
+            }
+        }
+        p {
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+.container .bkgd {
+  height: 128px;
+}
+.container #multi-bkgd {
+  background-image: url("../images/boxes.svg"), url("../images/grad-box.svg");
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+}
+.container #bkgd-size {
+  background-color: rgb(255, 255, 255);
+  background-image: url("../images/boxes.svg");
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+}
+.container #Large-imgz {
+  width: 100%;
+  height: 400px;
+  background-color: aqua;
+  display: flex;
+}
+.container #Large-imgz section {
+  width: 50%;
+  height: 100%;
+}
+.container #Large-imgz #Large-imgz-1 {
+  background-image: url("../images/boxes.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container #Large-imgz #Large-imgz-2 {
+  background-image: url("../images/boxes.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container2 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/technology.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#container2 h1 {
+  font-size: 5em;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#container3 {
+  background-image: linear-gradient(45deg, red, orange, yellow);
+}
+
+#container4 {
+  background-image: radial-gradient(circle, red, orange, yellow, blue 50%, purple);
+}
+
+#container5 .gallery {
+  float: left;
+  width: 25vw;
+  padding: 1em;
+}
+#container5 .gallery a img {
+  width: 80%;
+  height: auto;
+}
+#container5 .gallery p {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
