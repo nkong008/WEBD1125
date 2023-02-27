@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
+.container nav {
+  display: flex;
+  height: 50px;
+  background-color: white;
+  align-items: center;
+  padding: 0 2em;
+}
+.container nav span {
+  text-transform: uppercase;
+}
+.container nav ul {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+}
+.container nav ul li a {
+  display: inline-block;
+  padding: 0 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: red;
+  transition: color 200ms linear;
+}
+.container nav ul li a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container nav {
+    flex-direction: column;
+    height: auto;
+    background-color: transparent;
+  }
+  .container nav span {
+    display: inline-block;
+    padding: 0 1em;
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .container nav ul {
+    flex-direction: column;
+  }
+  .container nav ul li {
+    text-align: center;
+    margin: 0.5em 0;
+  }
+  .container nav ul li a {
+    color: white;
+  }
+}
+li#gallery {
+  position: relative;
+}
+
+ul#gallery-drop {
+  display: none;
+  position: absolute;
+  top: 2em;
+  flex-direction: column;
+  background-color: white;
+}
+ul#gallery-drop li {
+  padding: 1em 0;
+}
+
+li#gallery:hover ul#gallery-drop {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

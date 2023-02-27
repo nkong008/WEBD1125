@@ -83,4 +83,93 @@
 }
 #container5 .gallery p {
   color: white;
+}
+
+#container6 {
+  background-color: rgb(68, 68, 68);
+  position: relative;
+}
+#container6 footer {
+  width: 100%;
+  height: 100px;
+  background-color: aqua;
+  position: absolute;
+  bottom: 0%;
+}
+#container6 footer ul {
+  display: flex;
+  list-style-type: none;
+}
+#container6 footer ul li {
+  width: 100px;
+  height: 100px;
+}
+#container6 footer ul li a {
+  width: 100px;
+  height: 100px;
+  display: block;
+  transition: all 200ms linear;
+}
+#container6 footer ul li a#LinkedIn {
+  background: url("../images/social-color.png") 0px 0px;
+}
+#container6 footer ul li a#facebook {
+  background: url("../images/social-color.png") 100px 0px;
+}
+#container6 footer ul li a#github {
+  background: url("../images/social-color.png") 200px 0px;
+}
+#container6 footer ul li a#twitter {
+  background: url("../images/social-color.png") 300px 0px;
+}
+#container6 footer ul li a#LinkedIn:hover {
+  background: url("../images/social-grey.png") 0px 0px;
+}
+#container6 footer ul li a#facebook:hover {
+  background: url("../images/social-grey.png") 100px 0px;
+}
+#container6 footer ul li a#github:hover {
+  background: url("../images/social-grey.png") 200px 0px;
+}
+#container6 footer ul li a#twitter:hover {
+  background: url("../images/social-grey.png") 300px 0px;
+}
+
+#container7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#08102f, rgb(141, 141, 241));
+}
+#container7 section {
+  display: flex;
+  width: 80%;
+}
+#container7 section figure {
+  padding: 1em;
+  background-color: white;
+  display: inline-block;
+  width: 25%;
+  margin: 0 0.5em;
+  border-radius: 0.5em;
+  transition: all 200ms ease-in-out;
+}
+#container7 section figure img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+#container7 section figure figcaption {
+  background-color: white;
+  font-size: 0.75em;
+  padding: 1.5em;
+}
+#container7 section figure:hover {
+  box-shadow: 10px 10px 20px rgb(145, 48, 255);
+  transform: scale(1.2);
+  border: 1px solid rgb(225, 154, 247);
+}
+
+.xyz {
+  border-radius: 2em;
+  border: 10px solid red;
 }/*# sourceMappingURL=style.css.map */

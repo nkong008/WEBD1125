@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+    width: 100vw;
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    nav {
+        display: flex;
+        height: 50px;
+        background-color: white;
+        align-items: center;
+        padding: 0 2em;
+        span {
+            text-transform: uppercase;
+        }
+        ul {
+            display: flex;
+            margin-left: auto;
+            list-style: none;
+            li {
+                // padding: 0 1em; 
+                a {
+                    display: inline-block;
+                    padding: 0 1em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: red;
+                    transition: color 200ms linear;
+                }
+                a:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        nav {
+            flex-direction: column;
+            height: auto;
+            background-color: transparent;
+            span {
+                display: inline-block;
+                padding: 0 1em;
+                width: 100%;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            ul {
+                flex-direction: column;
+                li {
+                    text-align: center;
+                    margin: 0.5em 0;
+                    a {
+                        color: white;
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+//drop down example
+li#gallery {
+    position: relative;
+
+}
+ul#gallery-drop {
+    display: none;
+    position: absolute;
+    top: 2em;
+    // display: flex;
+    flex-direction: column;
+    background-color: white;
+    li {
+        padding: 1em 0;
+
+
+    }
+}
+
+//targeting certain things to get the drop effect with hover
+li#gallery:hover ul#gallery-drop{
+// a#gallery-a:hover ul#gallery-drop{
+    // display: flex;
+    // flex-direction: column;
+    display: block;
+
+}

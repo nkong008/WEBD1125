@@ -71,6 +71,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
     h1 {
         font-size: 5em;
         text-transform: uppercase;
@@ -91,9 +92,10 @@
     //if you want to use transparancy you have to use rgba() ex: rgba(255,0,0,0)
     background-image: linear-gradient(45deg, red, orange, yellow);
 }
+
 #container4 {
     //you can use percentages to changee the amount of color you use
-    background-image: radial-gradient( circle, red, orange, yellow, blue 50%, purple);
+    background-image: radial-gradient(circle, red, orange, yellow, blue 50%, purple);
 }
 
 #container5 {
@@ -103,6 +105,7 @@
         width: calc(100vw/4);
         //adds in some seperation 
         padding: 1em;
+
         a {
             img {
                 width: 80%;
@@ -110,8 +113,127 @@
                 height: auto;
             }
         }
+
         p {
             color: white;
         }
     }
+}
+
+//image sprites example//////
+#container6 {
+    background-color: rgb(68, 68, 68);
+    position: relative;
+
+    footer {
+        width: 100%;
+        height: 100px;
+        background-color: aqua;
+        position: absolute;
+        bottom: 0%;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            li {
+                width: 100px;
+                height: 100px;
+                //need a element to propery display items by using display block
+                a {
+                    width: 100px;
+                    height: 100px;
+                    //blcok needed otherwise content will not show
+                    display: block;
+                    transition: all 200ms linear;
+                }
+                //after each image you can position your image by using numbered px units to show a spacific image 
+                //remember to use easy units like 100's (especially when creating the image)
+                a#LinkedIn {
+                    background: url("../images/social-color.png") 0px 0px;
+                }
+
+                a#facebook {
+                    background: url("../images/social-color.png") 100px 0px;
+                }
+
+                a#github {
+                    background: url("../images/social-color.png") 200px 0px;
+                }
+
+                a#twitter {
+                    background: url("../images/social-color.png")300px 0px;
+                }
+
+                //hover state/////
+
+                a#LinkedIn:hover {
+                    background: url("../images/social-grey.png") 0px 0px;
+                }
+
+                a#facebook:hover {
+                    background: url("../images/social-grey.png") 100px 0px;
+                }
+
+                a#github:hover {
+                    background: url("../images/social-grey.png") 200px 0px;
+                }
+
+                a#twitter:hover {
+                    background: url("../images/social-grey.png")300px 0px;
+                }
+
+            }
+        }
+    }
+}
+
+//figure caption example 
+#container7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#08102f, rgb(141, 141, 241));
+    section {
+        display: flex;
+        width: 80%;
+        // height: 320px;
+        // background-image: linear-gradient(#000e7a, black);
+        figure {
+            // you need the physical background in order to effectivly apply the boarder radius 
+            padding: 1em;
+            background-color: white;
+            display: inline-block;
+            width: 25%;
+            margin: 0 0.5em;
+            //boarder radius needs a background color to work
+            border-radius: .5em;
+            transition: all 200ms ease-in-out;
+           
+            img {
+               width: 100%;
+               border-radius: 15px 15px 0 0;
+            }
+            figcaption {
+                background-color: white;
+                font-size: 0.75em;
+                padding: 1.5em;
+                
+
+            }
+        }
+        
+        figure:hover {
+            //adds shawdow when you hover over images 
+            box-shadow: 10px 10px 20px rgb(145, 48, 255);
+            //scales up when you hover over
+            transform: scale(1.2);
+            border: 1px solid rgb(225, 154, 247);
+        }
+    }
+}
+
+.xyz {
+    border-radius: 2em;
+    border:10px solid red;
 }
