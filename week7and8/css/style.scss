@@ -23,10 +23,13 @@
             display: flex;
             margin-left: auto;
             list-style: none;
+
             li {
+                // display: block;
                 // padding: 0 1em; 
                 a {
                     display: inline-block;
+                    display: block;
                     padding: 0 1em;
                     text-decoration: none;
                     text-transform: uppercase;
@@ -36,6 +39,22 @@
                 a:hover {
                     color: black;
                 }
+          
+
+            }
+            li#gallery {
+               position: relative; 
+               display: block;
+               ul#gallery-drop {
+                position: absolute;
+                top: 2em;
+                background-color: white;
+                display: none;
+               }
+            }
+
+            li#gallery:hover ul#gallery-drop {
+                display: block;
             }
         }
     }
@@ -74,29 +93,36 @@
 }
 
 //drop down example
-li#gallery {
-    position: relative;
+// .container nav ul li#gallery {
+//     position: relative;
 
-}
-ul#gallery-drop {
-    display: none;
-    position: absolute;
-    top: 2em;
-    // display: flex;
-    flex-direction: column;
-    background-color: white;
-    li {
-        padding: 1em 0;
+// }
+// .container nav ul li#gallery ul#gallery-drop {
+//     display: none;
+//     position: absolute;
+//     top: 2em;
+//     // display: flex;
+//     flex-direction: column;
+//     background-color: white;
+//     li {
+//         padding: 1em 0;
 
 
-    }
-}
+//     }
+// }
 
 //targeting certain things to get the drop effect with hover
-li#gallery:hover ul#gallery-drop{
+// li#gallery:hover ul#gallery-drop {
 // a#gallery-a:hover ul#gallery-drop{
     // display: flex;
     // flex-direction: column;
-    display: block;
+//     display: block;
 
-}
+// }
+// .container nav ul li#gallery:hover ul#gallery-drop  {
+// // a#gallery-a:hover ul#gallery-drop{
+//     // display: flex;
+//     // flex-direction: column;
+//     display: block;
+
+// }

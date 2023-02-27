@@ -29,6 +29,7 @@
 }
 .container nav ul li a {
   display: inline-block;
+  display: block;
   padding: 0 1em;
   text-decoration: none;
   text-transform: uppercase;
@@ -37,6 +38,19 @@
 }
 .container nav ul li a:hover {
   color: black;
+}
+.container nav ul li#gallery {
+  position: relative;
+  display: block;
+}
+.container nav ul li#gallery ul#gallery-drop {
+  position: absolute;
+  top: 2em;
+  background-color: white;
+  display: none;
+}
+.container nav ul li#gallery:hover ul#gallery-drop {
+  display: block;
 }
 
 @media screen and (max-width: 425px) {
@@ -68,22 +82,4 @@
   .container nav ul li a {
     color: white;
   }
-}
-li#gallery {
-  position: relative;
-}
-
-ul#gallery-drop {
-  display: none;
-  position: absolute;
-  top: 2em;
-  flex-direction: column;
-  background-color: white;
-}
-ul#gallery-drop li {
-  padding: 1em 0;
-}
-
-li#gallery:hover ul#gallery-drop {
-  display: block;
 }/*# sourceMappingURL=style.css.map */
