@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    // width: 100vw;
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+
+    nav {
+        background-color: white;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 2em;
+
+        span {
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: auto;
+            overflow: hidden;
+
+            li {
+                float: left;
+
+                a {
+                    padding: 0 1em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: red;
+                    transition: color 200ms linear;
+                }
+
+                a:hover {
+                    color: black;
+                }
+
+                ul#dropdown-content {
+                    display: none;
+                    position: absolute;
+                    //if you increase this it will not work 
+                    top: 2em;
+
+                    li {
+                        display: block;
+                        text-align: left;
+                        background-color: white;
+                        padding: 0.5em 0;
+
+                    }
+
+                    // targeting the first line of the list so code wont break
+                    li:nth-child(1) {
+                        margin-top: 1em;
+
+                    }
+                }
+            }
+
+            li,
+            a,
+            #dropbtn {
+                display: inline-block;
+            }
+
+            li#dropdown {
+                display: inline-block;
+            }
+
+            li#dropdown:hover ul#dropdown-content {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        nav {
+            flex-direction: column;
+            height: auto;
+            background-color: transparent;
+
+            span {
+                display: inline-block;
+                padding: 0 1em;
+                width: 100%;
+                margin-bottom: 1em;
+                text-align: center;
+                // font-size: 3em;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    text-align: center;
+                    margin: 0.5em 0;
+
+                    a {
+                        color: white;
+                    }
+
+                    ul#dropdown-content {
+                        // position: relative;
+                        // top: 0;
+                        // manuallly bringing down content
+                        // display: flex;
+                        // flex-direction: column;
+
+                        top: 462px;
+                        left: 225px;
+
+                        li {
+                            text-align: left;
+                            background-color: transparent;
+                            padding: 0;
+                        }
+                        
+
+                    }
+                }
+            }
+        }
+    }
+}
