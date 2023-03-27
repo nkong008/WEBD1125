@@ -38,6 +38,7 @@
 }
 .container .nav__listitem {
   list-style: none;
+  text-decoration: none;
   font-weight: bold;
   position: relative;
   padding: 1.5rem 1rem;
@@ -108,13 +109,63 @@
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
 }
+.container main section#main-section form {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  padding-top: 30px;
+}
+.container main section#main-section form input {
+  width: 200%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: list-item;
+}
+.container main section#main-section form select {
+  width: 200%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: list-item;
+  cursor: pointer;
+}
+.container main section#main-section form input[type=submit] {
+  width: 200%;
+  background-color: #d1a71b;
+  color: rgb(255, 255, 255);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: list-item;
+  margin-top: 60px;
+}
+.container main section#main-section form input[type=submit]:hover {
+  background-color: rgb(128, 128, 128);
+  transition: 300ms;
+  border: none;
+  cursor: pointer;
+}
+.container main section#main-section form input[type=text]:hover {
+  background-color: #d1d1d1;
+  transition: 300ms;
+  border: none;
+}
 .container main section#main-section div#main-section-div {
   height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.container main section#main-section div#main-section-div section#img1 {
+.container main section#main-section section#img1 {
   height: 70%;
   width: 100%;
   background-color: red;
@@ -123,16 +174,16 @@
   background-image: url(../images/cityscape.jpg);
   background-size: contain;
 }
-.container main section#main-section div#main-section-div img#city {
+.container main section#main-section img#city {
   width: 100%;
   transition: filter 200ms ease-in;
   cursor: pointer;
   filter: sepia(100%);
 }
-.container main section#main-section div#main-section-div img#city:hover {
+.container main section#main-section img#city:hover {
   filter: grayscale(100%);
 }
-.container main section#main-section div#main-section-div section#img1-text {
+.container main section#main-section section#img1-text {
   padding: 0;
   font-size: 4rem;
   position: absolute;
