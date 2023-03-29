@@ -134,12 +134,16 @@ $blueColor: rgba(0, 0, 255, 1);
       top: 3rem;
       width: 80%;
       height: 80%;
+      // wont go smaller than that
+      // min-height: 729px;
+      min-height: 600px;
       background-color: $blueColor;
       padding: 3rem;
       border-radius: $radius1;
       h1 {
         color: $whiteColor;
         font-size: 2.5rem;
+        margin-bottom: 1em;
       }
       form {
         // white-space: pre-wrap;
@@ -148,17 +152,31 @@ $blueColor: rgba(0, 0, 255, 1);
         color: white;
         font-size: 2rem;
         padding-top: 30px;
-        input {
-          width: 200%;
+        input[type="text"] {
+          width: 250%;
           padding: 14px 20px;
           margin: 8px 0;
           border: none;
           border-radius: 4px;
           box-sizing: border-box;
           display: list-item;
+          background-color: $grayColor;
+        }
+        input[type="text"]:focus {
+          width: 250%;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          box-sizing: border-box;
+          display: list-item;
+          background-color: $whiteColor;
+          border: none;
+          outline: 0;
+          transition: background-color 200ms linear;
         }
         select {
-          width: 200%;
+          width: 250%;
           padding: 14px 20px;
           margin: 8px 0;
           display: inline-block;
@@ -167,30 +185,40 @@ $blueColor: rgba(0, 0, 255, 1);
           box-sizing: border-box;
           display: list-item;
           cursor: pointer;
+          border: none;
+          outline: 0;
+          background-color: $grayColor;
         }
         input[type="submit"] {
-          width: 200%;
-          background-color: #d1a71b;
-          color: $whiteColor;
+          width: 100%;
+          background-color: $whiteColor;
+          color: $blueColor;
           padding: 14px 20px;
           margin: 8px 0;
           border: none;
-          border-radius: 4px;
+          border-radius: $radius1;
           cursor: pointer;
           font-size: 1rem;
           display: list-item;
-          margin-top: 60px;
+          margin-top: 40px;
+          margin-left: 325px;
+          // background-color: $grayColor;
+          transition: all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
         }
         input[type="submit"]:hover {
-          background-color: $grayColor;
-          transition: 300ms;
+          // background-color: rgb(179, 179, 179);
+          background-color: rgba(128, 128, 128, 1);
+          color: white;
           border: none;
           cursor: pointer;
         }
         input[type="text"]:hover {
-          background-color: #d1d1d1;
+          // background-color: #d1d1d1;
           transition: 300ms;
           border: none;
+        }
+        select:focus {
+          background-color: $whiteColor;
         }
       }
       div#main-section-div {
@@ -198,16 +226,53 @@ $blueColor: rgba(0, 0, 255, 1);
         width: 100%;
         position: relative;
         overflow: hidden;
+        // imahge gallery example
+        section#main-section-div-section {
+          // makes them sit side by side
+          display: flex;
+          //helps spread the content out evenly
+          justify-content: space-evenly;
+          figure {
+            background-color: white;
+            width: 30%;
+            border-radius: $radius1;
+            cursor: pointer;
+            img {
+              width: 100%;
+              border-radius: $radius1 $radius1 0 0;
+              transition: filter 50ms cubic-bezier(0.47, 0, 0.745, 0.715);
+            }
+            figcaption {
+              text-align: center;
+              padding: 1em 0;
+              p {
+                text-align: left;
+                padding: 1em;
+              }
+            }
+          }
+          //targeting image o
+          figure:hover img {
+            filter: sepia(100%);
+          }
+          //targeting just figure
+          figure:hover {
+            box-shadow: $radius $radius1 $radius rgba (0, 0, 0, 0.4);
+          }
+        }
+        //end of image gallery example//////////////
       }
 
       section#img1 {
         height: 70%;
         width: 100%;
-        background-color: red;
+        // background-color: red;
         border-radius: $radius1;
         position: relative;
         background-image: url(../images/cityscape.jpg);
-        background-size: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: $radius solid $whiteColor;
       }
       img#city {
         width: 100%;
@@ -239,5 +304,5 @@ $blueColor: rgba(0, 0, 255, 1);
   }
 }
 footer {
-  
+
 }
