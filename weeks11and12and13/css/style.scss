@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+//using css variables 
+//two wyas of usuing it global and local scope
+:root {
+    --fullWidth: 100vw;
+    --fullHeight: 100vh;
+    --gradientBkgd: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    //this is an example of css variables using global scope
+    --f: flex;
+    --jcc: center;
+    --aic: center;
+    --spb: space-between;
+    --2em: 2em;
+}
+
+.container {
+    --gradientBkgd2: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    //this is an example of css variables using local scope which can only be used within the container
+    //using my css variable
+    width: var(--fullWidth);
+    height: var(--fullHeight);
+    // background: var(--gradientBkgd1);
+    background: var(--gradientBkgd2);
+    display: var(--f);
+    justify-content: var(--spb);
+    align-items: var(--aic);
+    padding: var(--2em);
+    section {
+        --minWidth: 300px;
+        --minWidth: var(--minWidth);
+        width: 30%;
+        height: 300px;
+        background: white;
+        padding: var(--2em);
+        border-radius: var(--2em);
+
+    }
+    // section:nth-child(1) {
+    //     background-color: red;
+    // }
+    // section:nth-child(2) {
+    //     background-color: rgb(9, 153, 98);
+    //     padding: 2em;
+    //     border: 1em solid white;
+    //     //usiing box-sizing example//
+    //     //content box is the default
+    //     // Defines how the width and height of an element are calculated: should they include padding and borders, or not
+    //     box-sizing: border-box;
+    // }
+}
