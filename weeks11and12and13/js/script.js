@@ -7,7 +7,7 @@ $(function() {
     section.css("box-shadow", "4px 4px 10px rgba(0, 0, 0, 0.4)")
     console.log("section");
 
-    // creating animation time line 
+    // creating animation time line using variables
     let tl0 = gsap.timeline({
         id: "animation0"
 
