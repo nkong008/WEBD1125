@@ -6,6 +6,15 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+@font-face {
+    font-family: neuropol;
+    src: url(../fonts/neuropol.otf);
+}
+
+@font-face {
+    font-family: pirulen;
+    src: url(../fonts/pirulen_rg.ttf);
+}
 
 //using css variables 
 //two wyas of usuing it global and local scope
@@ -21,28 +30,170 @@
     --2em: 2em;
 }
 
+//transition exmample
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex; 
+    align-items: center;
+    span {
+        margin-left: 4em;
+        h1 {
+            transition: color 200ms linear;
+        }
+    }
+    span:hover h1{
+        color: #97D9E1;
+    }
+    ul {
+        display: flex;
+        margin-left: auto;
+        list-style-type: none;
+        margin-right: 4em;
+        li {
+            // helps seperate items
+            padding: 0 0.75em;
+            cursor: pointer;
+            a {
+                position: relative;
+                text-decoration: none;
+                color: black;
+                text-transform: uppercase;
+            }
+            a::before {
+                content: "";
+                width: 0%;
+                // height: 4px;
+                background-color: #D9AFD9;
+                position: absolute;
+                top: 1.25em;
+                padding-right: 4px;
+                // transition example////////////////
+                transition: all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+            }
+        }
+        li:hover a::before{
+            width: 100%;
+            height: 2px;
+        }
+        li:hover a {
+            color:#97D9E1;
+        }
+    }
+}
 .container {
     --gradientBkgd2: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
     //this is an example of css variables using local scope which can only be used within the container
     //using my css variable
     width: var(--fullWidth);
-    height: var(--fullHeight);
+    height: calc(var(--fullHeight) - 60px);
     // background: var(--gradientBkgd1);
     background: var(--gradientBkgd2);
     display: var(--f);
-    justify-content: var(--spb);
+    justify-content: var(--jcc);
     align-items: var(--aic);
     padding: var(--2em);
-    section {
-        --minWidth: 300px;
-        --minWidth: var(--minWidth);
-        width: 30%;
-        height: 300px;
-        background: white;
-        padding: var(--2em);
-        border-radius: var(--2em);
-
+    //automatically hides the elements that overflows past 
+    // overflow: hidden;
+    div#content {
+        width: 80%;
+        background: black;
+        height: 90%;
+        border: 0.5em solid #fff;
+        border-radius: 2em;
+        color: #97D9E1;
+        h1, h4 {
+            color: #97D9E1;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-family: neuropol;
+            font-size: 4em;
+            // animation-name: h1-animation;
+            // animation-duration: 4s;
+            // animation-delay: 1s;
+            // //will repeat twice
+            // animation-iteration-count: infinite;
+            // animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            //short cut of having them all together
+            animation: h1-animation 6s  cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s infinite;
+        }
+        h4 {
+            font-family: pirulen;
+            font-size: 1.5em;
+            color: #D9AFD9;
+            letter-spacing: 0.5em;
+            animation: h4-animation 6s  cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s 2 forwards;
+        }
+        // animation example
+        @keyframes h1-animation {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes h4-animation {
+            0% {
+                opacity: 0;
+                color: #97D9E1;
+            }
+            50%{
+                opacity: 0.5;
+                color: rgb(0, 255, 247);
+            }
+            100% {
+                opacity: 1;
+                color: #ff00ff;
+            }
+        }
     }
+    // section {
+
+    //     --minWidth: 300px;
+    //     --minWidth: var(--minWidth);
+    //     width: 30%;
+    //     height: 300px;
+    //     background: white;
+    //     padding: var(--2em);
+    //     border-radius: var(--2em);
+    //     h1 {
+    //         // position: relative;
+    //         left: 100px;
+    //         padding: 1em;
+    //         background: red;
+    //         color: white;
+    //         // creating 2d animations///////////////////////////////////
+    //         // transform: translate(150px, 0px);
+    //         // scale is just a ratio, you dont need units like px//////
+    //         // scaling x and y///////
+    //         // transform: scale(2, 2);
+    //         // only scaling the x axis///////
+    //         // transform: scaleX(2);
+    //         // transform: scaleY(5);
+    //         // transform: rotate(45deg);
+    //         // skew stretches content out////////
+    //         // transform: skewX(30deg);
+    //         // transform: skew(30deg, 30deg);
+    //         // Notes: on matrix The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())////////////
+    //         // transform: matrix(1, 1.2, 3.0, 1, 25, 0);
+    //         // 3d animation/////////////////////////////////////////////
+    //         // transform: rotateX(60deg);
+    //         transition: all 200ms linear;
+    //     }
+    //     } 
+    //     section:nth-child(1) {
+        //perspective has to be applied to the parent 
+    //         perspective: 500px;
+    //         h1:hover {
+    //         // transform: rotateY(30deg);
+    //         transform: rotateY(80deg);
+    //         transform-style: preserve-3d;
+    //         transform-origin: 50%, 50%;
+    //     }
+    // }
     // section:nth-child(1) {
     //     background-color: red;
     // }
@@ -55,4 +206,5 @@
     //     // Defines how the width and height of an element are calculated: should they include padding and borders, or not
     //     box-sizing: border-box;
     // }
-}
+
+ }
